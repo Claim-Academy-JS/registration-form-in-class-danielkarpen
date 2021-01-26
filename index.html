@@ -16,7 +16,7 @@
   <body>
     <!-- Create a registration form with fields for first name, last name, username, password, email and phone number -->
     <h1>Registration Form</h1>
-    <form class="card" action="" method="get" class="registration">
+    <form class="card registration" action="" method="get">
       <div>
         <label class="screen-reader-text" for="fname">First Name</label>
         <input type="text" id="fname" placeholder="First Name" required />
@@ -28,6 +28,11 @@
         <p class="is-hidden">Last Name is required!</p>
       </div>
       <div>
+        <label class="screen-reader-text" for="email">E-mail</label>
+        <input type="email" id="email" placeholder="E-mail" required />
+        <p class="is-hidden">This doesn't look like an E-mail address!</p>
+      </div>
+      <div>
         <label class="screen-reader-text" for="uname">Username</label>
         <input type="text" id="uname" placeholder="Username" required />
         <p class="is-hidden">Username is required!</p>
@@ -35,11 +40,6 @@
       <div>
         <label class="screen-reader-text" for="password">Password</label>
         <input type="password" id="password" placeholder="Password" required />
-      </div>
-      <div>
-        <label class="screen-reader-text" for="email">E-mail</label>
-        <input type="email" id="email" placeholder="E-mail" required />
-        <p class="is-hidden">This doesn't look like an E-mail address!</p>
       </div>
       <div class="flex flex--align-center flex--justify-between">
         <button type="submit">Register!</button>
