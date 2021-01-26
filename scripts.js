@@ -12,6 +12,7 @@ const toggledInputs = Array.from(document.querySelectorAll("input")).slice(
 toggleBtn.addEventListener("click", function () {
   if (this.innerText === "Already have an account?") {
     for (let i = 0; i < toggledInputs.length; i += 1) {
+      toggledInputs[i].classList.remove("is-visible");
       toggledInputs[i].classList.add("is-hidden");
     }
     this.innerText = "Need to create an account?";
@@ -19,6 +20,7 @@ toggleBtn.addEventListener("click", function () {
   } else {
     const hiddenInputs = document.querySelectorAll("input.is-hidden");
     for (let i = 0; i < hiddenInputs.length; i += 1) {
+      hiddenInputs[i].classList.remove("is-hidden");
       hiddenInputs[i].classList.add("is-visible");
     }
     this.innerText = "Already have an account?";
