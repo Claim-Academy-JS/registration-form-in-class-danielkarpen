@@ -5,6 +5,10 @@
 const submitBtn = document.querySelector('button[type="submit"]');
 const toggleBtn = document.querySelector("#toggle-btn");
 
+console.log(submitBtn);
+
 toggleBtn.addEventListener("click", function () {
-  this.textContent = "Need to create an account?";
+  this.innerText = "Need to create an account?";
+
+  submitBtn.innerText = "Login!";
 });
