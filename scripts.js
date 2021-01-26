@@ -5,10 +5,16 @@
 const submitBtn = document.querySelector('button[type="submit"]');
 const toggleBtn = document.querySelector("#toggle-btn");
 
+const toggledInputs = document.querySelectorAll("input:not(#uname, #password)");
+
 console.log(submitBtn);
 
 toggleBtn.addEventListener("click", function () {
-  this.innerText = "Need to create an account?";
-
-  submitBtn.innerText = "Login!";
+  if (this.innerText === "Already have an account?") {
+    this.innerText = "Need to create an account?";
+    submitBtn.innerText = "Login!";
+  } else {
+    this.innerText = "Already have an account?";
+    submitBtn.innerText = "Register!";
+  }
 });
